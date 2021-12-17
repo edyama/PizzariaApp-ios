@@ -14,14 +14,22 @@ final class PizzariaAppViewController: UIViewController {
     // MARK: - Outlets
     
     // MARK: - Class properties
-    private var viewModel: PizzariaAppViewModelProtocol
+    private var viewModel: PizzariaAppViewModel
 
     // MARK: - Public properties
-
+    private lazy var helloWorld: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.textColor = .black
+        label.text = "Hello, World"
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
     
     // MARK: - Life Cycle
-    
-    init(viewModel: PizzariaAppViewModelProtocol = PizzariaAppViewModel()) {
+    init(viewModel: PizzariaAppViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,11 +40,18 @@ final class PizzariaAppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupSubViews()
     }
     
     // MARK: - Class Configurations
     
     // MARK: - UIActions
+    private func setupSubViews() {
+        view.addSubview(helloWorld)
+        helloWorld.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        helloWorld.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
     
     // MARK: - Class Methods
     

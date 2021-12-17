@@ -12,6 +12,3 @@ import UIKit
 final class PizzariaAppViewModel {
     
 }
-
-// MARK: - Extensions
-extension PizzariaAppViewModel: PizzariaAppViewModelProtocol { }
