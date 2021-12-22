@@ -10,6 +10,7 @@
 import Foundation
 
 protocol PizzariaAppViewModelProtocol {
+    var updateHelloWorld: ((String) -> Void)? { get set }
     func viewDidLoad()
 }
 

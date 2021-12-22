@@ -18,6 +18,14 @@ final class PizzariaAppViewController: UIViewController {
         return imageView
     }()
     
+    private lazy var helloWorldLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        return label
+    }()
+    
     // MARK: - Class properties
     private var viewModel: PizzariaAppViewModelProtocol
 
@@ -36,20 +44,33 @@ final class PizzariaAppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         setupSubViews()
         bindUI()
         viewModel.viewDidLoad()
     }
     
     // MARK: - Class Configurations
+    private func setupView() {
+        view.backgroundColor = .white
+    }
+    
     private func setupSubViews() {
         view.addSubview(logoImageView)
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 250).isActive = true
+        
+        view.addSubview(helloWorldLabel)
+        helloWorldLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        helloWorldLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
     // MARK: - UIActions
-    private func bindUI() {  }
+    private func bindUI() {
+        viewModel.updateHelloWorld = { [weak self] stringLabel in
+            self?.helloWorldLabel.text = stringLabel
+        }
+    }
     
     // MARK: - Class Methods
 }
