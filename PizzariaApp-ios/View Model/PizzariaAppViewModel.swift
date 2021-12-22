@@ -10,5 +10,15 @@
 import UIKit
 
 final class PizzariaAppViewModel {
+    private enum Strings {
+        static let helloWorld = "Hello, World!"
+    }
     
+    var updateHelloWorld: ((String) -> Void)?
+    
+    func viewDidLoad() {
+        updateHelloWorld?(Strings.helloWorld)
+    }
 }
+
+extension PizzariaAppViewModel: PizzariaAppViewModelProtocol {  }
