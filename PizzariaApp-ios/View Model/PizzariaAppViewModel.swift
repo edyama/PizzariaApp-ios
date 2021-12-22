@@ -10,11 +10,11 @@
 import UIKit
 
 final class PizzariaAppViewModel {
-    // MARK: - Components
-    public var stringImage: String {
-        return "pizza-logo-design_9845-319"
-    }
+    private enum Strings {  }
     
-    // MARK: - Methods
-    init() {}
+    func viewDidLoad() {  }
+}
+
+extension PizzariaAppViewModel: PizzariaAppViewModelProtocol {
+    
 }

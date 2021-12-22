@@ -10,28 +10,46 @@
 import UIKit
 
 final class PizzariaAppViewController: UIViewController {
-    // MARK: - Properties
-    private var viewModel = PizzariaAppViewModel()
-
-    // MARK: - Components
+    // MARK: - Outlets
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: viewModel.stringImage)
+        imageView.image = UIImage(named: "PizzaLogo")
         return imageView
     }()
     
+    // MARK: - Class properties
+    private var viewModel: PizzariaAppViewModelProtocol
+
+    // MARK: - Public properties
+
+    
     // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupSubViews()
+    init(viewModel: PizzariaAppViewModelProtocol = PizzariaAppViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
-    // MARK: - Methods
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubViews()
+        bindUI()
+        viewModel.viewDidLoad()
+    }
+    
+    // MARK: - Class Configurations
     private func setupSubViews() {
         view.addSubview(logoImageView)
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
+    // MARK: - UIActions
+    private func bindUI() {  }
+    
+    // MARK: - Class Methods
 }

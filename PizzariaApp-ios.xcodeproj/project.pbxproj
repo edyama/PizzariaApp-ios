@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9083FCDE277333330044E7BF /* PizzariaAppViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9083FCDC277333320044E7BF /* PizzariaAppViewModelProtocol.swift */; };
 		90F8AA10276CD6AA008585BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8AA0F276CD6AA008585BF /* AppDelegate.swift */; };
 		90F8AA12276CD6AA008585BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8AA11276CD6AA008585BF /* SceneDelegate.swift */; };
 		90F8AA17276CD6AA008585BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F8AA15276CD6AA008585BF /* Main.storyboard */; };
@@ -14,10 +15,10 @@
 		90F8AA1C276CD6AD008585BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F8AA1A276CD6AD008585BF /* LaunchScreen.storyboard */; };
 		90F8AA2B276CD727008585BF /* PizzariaAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8AA27276CD727008585BF /* PizzariaAppViewController.swift */; };
 		90F8AA2C276CD727008585BF /* PizzariaAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8AA28276CD727008585BF /* PizzariaAppViewModel.swift */; };
-		90F8AA2D276CD727008585BF /* PizzariaAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F8AA29276CD727008585BF /* PizzariaAppViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9083FCDC277333320044E7BF /* PizzariaAppViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzariaAppViewModelProtocol.swift; sourceTree = "<group>"; };
 		90F8AA0C276CD6AA008585BF /* PizzariaApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PizzariaApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F8AA0F276CD6AA008585BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90F8AA11276CD6AA008585BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		90F8AA1D276CD6AD008585BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F8AA27276CD727008585BF /* PizzariaAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzariaAppViewController.swift; sourceTree = "<group>"; };
 		90F8AA28276CD727008585BF /* PizzariaAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzariaAppViewModel.swift; sourceTree = "<group>"; };
-		90F8AA29276CD727008585BF /* PizzariaAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzariaAppViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +76,7 @@
 		90F8AA23276CD6D2008585BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9083FCDC277333320044E7BF /* PizzariaAppViewModelProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				90F8AA27276CD727008585BF /* PizzariaAppViewController.swift */,
-				90F8AA29276CD727008585BF /* PizzariaAppViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,7 +155,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F8AA2D276CD727008585BF /* PizzariaAppViewController.xib in Resources */,
 				90F8AA1C276CD6AD008585BF /* LaunchScreen.storyboard in Resources */,
 				90F8AA19276CD6AD008585BF /* Assets.xcassets in Resources */,
 				90F8AA17276CD6AA008585BF /* Main.storyboard in Resources */,
@@ -169,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9083FCDE277333330044E7BF /* PizzariaAppViewModelProtocol.swift in Sources */,
 				90F8AA2C276CD727008585BF /* PizzariaAppViewModel.swift in Sources */,
 				90F8AA2B276CD727008585BF /* PizzariaAppViewController.swift in Sources */,
 				90F8AA10276CD6AA008585BF /* AppDelegate.swift in Sources */,
